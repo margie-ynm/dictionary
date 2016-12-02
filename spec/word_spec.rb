@@ -19,10 +19,16 @@ describe(Word) do
       expect(test_word.term_list).to(eq([test_entry]))
     end
   end
-  describe("#add") do
+  describe(".add") do
     it('is empty at first') do
       expect(Word.all()).to(eq([]))
     end
   end
-  
+  describe('#save') do
+    it('adds a task to the array of saved tasks') do
+    test_word = Word.new({:name => "extraordinary"})
+    test_word.save()
+    expect(Word.all()).to(eq([test_word]))
+    end
+  end
 end
