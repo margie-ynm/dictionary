@@ -19,4 +19,10 @@ describe(Word) do
       expect(test_word.term_list).to(eq([test_entry]))
     end
   end
+  describe("#add") do
+    it('is empty at first') do
+      expect(Word.all()).to(eq([]))
+    end
+  end
+  
 end

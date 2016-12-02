@@ -10,4 +10,8 @@ class Word
   define_method(:add_entry) do |entry|
     @term_list.push(entry)
   end
+
+  define_singleton_method(:all) do
+    []
+  end
 end
