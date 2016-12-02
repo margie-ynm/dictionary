@@ -4,5 +4,10 @@ class Word
 
   define_method(:initialize) do |attributes|
     @name = attributes.fetch(:name)
+    @term_list = []
+  end
+
+  define_method(:add_entry) do |entry|
+    @term_list.push(entry)
   end
 end
