@@ -4,6 +4,5 @@ class Word
 
   define_method(:initialize) do |attributes|
     @name = attributes.fetch(:name)
-    @term_list = []
   end
 end
