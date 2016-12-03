@@ -29,6 +29,19 @@ get('/words/:id') do
   erb(:word)
 end
 
+get('/words/:id/entry_new') do
+  id = params.fetch('id').to_i
+  @word = Word.find(id)
+  erb(:entry_form)
+end
+
+post('/definition') do
+  entry = params.fetch('entry_new')
+  id = params.fetch('word_id').to_i
+  @word = Word.find(id)
+  @word.add_entry({:entry => entry})
+  erb(:success)
+end
 
 
 

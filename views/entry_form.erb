@@ -1,0 +1,8 @@
+<h2>Add a new definition</h2>
+<form action="/definition" method="post">
+  <input id="word_id" name="word_id" type="hidden" value="<%=@word.id()%>">
+
+  <label for="entry_new">Enter the definition for the word:</label>
+  <input type="text" name="entry_new">
+  <button type="submit">Add entry</button>
+</form>
