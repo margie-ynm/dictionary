@@ -23,6 +23,14 @@ get('/words') do
   erb(:words)
 end
 
+get('/words/:id') do
+  id = params.fetch('id').to_i
+  @word = Word.find(id)
+  erb(:word)
+end
+
+
+
 
 
 #ToDo: create page for all words
