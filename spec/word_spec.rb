@@ -31,4 +31,21 @@ describe(Word) do
     expect(Word.all()).to(eq([test_word]))
     end
   end
+
+  describe(".clear") do
+    it('empties out all of the saved words') do
+      Word.new({:name => "energy"})
+      Word.clear()
+      expect(Word.all()).to(eq([]))
+    end
+  end
+
+  describe("#id") do
+    it('returns the id of the word') do
+      test_word = Word.new({:name => "extraordinary"})
+      test_word.save()
+      expect(test_word.id()).to(eq(1))
+    end
+  end
+  describe()
 end
