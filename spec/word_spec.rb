@@ -3,6 +3,9 @@ require('rspec')
 require('entry')
 
 describe(Word) do
+  before() do
+    Word.clear()
+  end
   describe("#initialize") do
     it('will check the initial attributes') do
       test_word = Word.new({:name => "extraordinary"})
