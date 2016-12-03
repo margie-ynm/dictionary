@@ -47,5 +47,13 @@ describe(Word) do
       expect(test_word.id()).to(eq(1))
     end
   end
-  describe()
+  describe("#find") do
+    it('returns a word by its id number') do
+      test_word = Word.new(:name => "energy")
+      test_word.save()
+      test_word2 = Word.new(:name => 'extraordinary')
+      test_word2.save()
+      expect(Word.find(test_word2.id())).to(eq(test_word2))
+    end
+  end
 end
