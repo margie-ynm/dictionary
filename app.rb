@@ -26,6 +26,7 @@ end
 get('/words/:id') do
   id = params.fetch('id').to_i
   @word = Word.find(id)
+  @term_list = @word.term_list
   erb(:word)
 end
 
@@ -39,7 +40,7 @@ post('/definition') do
   entry = params.fetch('entry_new')
   id = params.fetch('word_id').to_i
   @word = Word.find(id)
-  @word.add_entry({:entry => entry})
+  @word.add_entry(Entry.new({:meaning=>entry}))
   erb(:success)
 end
 

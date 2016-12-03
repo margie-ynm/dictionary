@@ -1,3 +1,9 @@
 <h1><%=@word.name%></h1>
 <h3>Definitions</h3>
+<ul>
+
+<%@word.term_list.each do |term| %>
+<li><%= term.meaning %></li>
+<% end %>
+</ul>
 <h5><a href="/words/<%= @word.id%>/entry_new">Add definition(s)</h5>
