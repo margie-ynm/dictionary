@@ -21,5 +21,12 @@ describe("testing the site", {:type => :feature}) do
       expect(page).to have_content('Success')
     end
   end
+  describe('/words') do
+    it('displays all words') do
+      visit('/')
+      click_link('All Words')
+      expect(page).to have_content('Word List')
+    end
+  end
 
 end

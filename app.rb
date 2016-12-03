@@ -17,3 +17,14 @@ post('/words') do
   Word.new({:name => word_name}).save()
   erb(:success)
 end
+
+get('/words') do
+  @words = Word.all()
+  erb(:words)
+end
+
+
+
+#ToDo: create page for all words
+#create page for each word
+#then need option to create definition on page of word i.e. another route for new form for terms with id for word
