@@ -43,10 +43,3 @@ post('/definition') do
   @word.add_entry(Entry.new({:meaning=>entry}))
   erb(:success)
 end
-
-
-
-
-#ToDo: create page for all words
-#create page for each word
-#then need option to create definition on page of word i.e. another route for new form for terms with id for word

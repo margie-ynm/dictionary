@@ -21,24 +21,30 @@ describe("testing the site", {:type => :feature}) do
       expect(page).to have_content('Success')
     end
   end
-  describe('/words') do
+  describe('/') do
     it('displays all words') do
       visit('/')
-      click_link('All Words')
-      expect(page).to have_content('Word List')
+      click_link('Add a new word')
+      fill_in('word_name', :with => "Enlightened")
+      click_button('Add word')
+      click_link('Home Page')
+      expect(page).to have_content("Enlightened")
     end
   end
   describe('/entry_new') do
-    Word.clear()
-    it 'creates a new entry under existing word' do
-      visit('/word/new')
-      fill_in('word_name', :with=> "Enlightened")
+    it ('creates a new entry under existing word') do
+      visit('/')
+      click_link('Add a new word')
+      fill_in('word_name', :with=> "Extraordinary")
       click_button('Add word')
-      visit('words/1')
-      click_link('Add definitions')
-      fill_in('entry_new', :with=> 'to give intellectual or spiritual light to; instruct; impart knowledge to')
+      click_link('Home Page')
+      click_link('Extraordinary')
+      click_link('Add definition(s)')
+      fill_in('entry_new', :with=> 'beyond what is usual, ordinary, regular, or established')
       click_button('Add entry')
-      expect(page).to have_content('Success')
+      click_link('Home Page')
+      click_link('Extraordinary')
+      expect(page).to have_content('beyond what is usual, ordinary, regular, or established')
     end
   end
 end
