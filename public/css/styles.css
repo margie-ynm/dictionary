@@ -1,0 +1,41 @@
+body {
+  font-family: 'Jockey One', sans-serif;
+  background-color: lightgrey;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  color: white;
+  text-shadow: 0 0 20px black;
+}
+
+a {
+  text-decoration: underline;
+  color: black;
+}
+
+#adding-word {
+  color: black;
+  text-shadow: 0 0 20px lightgrey;
+}
+
+.container {
+  width: 80%;
+}
+
+#word-list {
+  text-align: center;
+}
+
+.well {
+color: black;
+border: 2px solid black;
+box-shadow: 0 0 15px 5px lightgrey;
+background-color: #white;
+}
+
+.alert, alert-info {
+  text-align: center;
+}

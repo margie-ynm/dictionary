@@ -1,9 +1,11 @@
 <h1>Build Your Own Dictionary</h1>
-
-<ul>
-  <%@words.each do |word|%>
-  <li><a href='/words/<%=word.id%>'><%=word.name%></a></li>
-  <% end %>
-</ul>
-
-<a href="/word/new">Add a new word</a>
+<h4><a href="/word/new" id="adding-word">Add a new word</a></h4>
+<div class="alert alert-warning">
+  <h3>
+    <ul style="list-style-type:none" id="word-list">
+      <%@words.each do |word|%>
+      <li><a href='/words/<%=word.id%>'><%=word.name%></a></li>
+      <% end %>
+    </ul>
+  </h3>
+</div>
