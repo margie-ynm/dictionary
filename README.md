@@ -4,7 +4,7 @@
 
 #### By _**Margie Nevarez**_
 
-##### To view live page on heroku click here: [margie-ynm]
+##### To view live page on heroku click here: [margie-ynm](https://pure-wave-32132.herokuapp.com/)
 
 ## Description
 
