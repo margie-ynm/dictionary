@@ -4,6 +4,8 @@ require('sinatra')
 require('sinatra/reloader')
 also_reload('./lib/**/*.rb')
 
+set :public_folder, 'public'
+
 get('/') do
   @words = Word.all()
   erb(:index)
