@@ -8,7 +8,7 @@
 
 ## Description
 
-_The application navigates the user to a home page where they can begin adding words to a list. After submission, the user is able to click on a word and be navigated to another page where they able to add definition(s) for the word.
+_The application navigates the user to a home page where they can begin adding words to a list. After submission, the user is able to click on a word and be navigated to another page where they able to add definition(s) for the word._
 
 ## Setup/Installation Requirements
 
